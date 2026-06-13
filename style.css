@@ -259,3 +259,555 @@ color:var(–primary);
 .secondary-btn:hover{
 background:rgba(0,212,255,.08);
 }
+/* ===================================
+V5 PORTFOLIO - PART 2
+HERO + STATS + CARDS
+=================================== */
+
+/* HERO */
+
+.hero{
+position:relative;
+
+min-height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+overflow:hidden;
+}
+
+#three-container{
+position:absolute;
+
+inset:0;
+
+z-index:0;
+
+opacity:.45;
+
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+
+max-width:900px;
+}
+
+.profile-image{
+width:220px;
+height:220px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:5px solid var(–primary);
+
+margin-bottom:30px;
+
+box-shadow:
+0 0 30px rgba(0,212,255,.5),
+0 0 80px rgba(0,212,255,.25);
+
+transition:var(–transition);
+}
+
+.profile-image:hover{
+transform:scale(1.05);
+}
+
+.hero-tag{
+display:block;
+
+color:var(–primary);
+
+letter-spacing:3px;
+
+margin-bottom:20px;
+
+font-size:.85rem;
+}
+
+.hero h1{
+font-size:clamp(
+2.8rem,
+8vw,
+5.8rem
+);
+
+line-height:1.05;
+
+margin-bottom:24px;
+
+font-weight:900;
+}
+
+.hero-description{
+max-width:700px;
+
+margin:auto;
+
+color:var(–text-secondary);
+
+font-size:1.1rem;
+
+margin-bottom:40px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+}
+
+/* STATS */
+
+.stats-grid{
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+}
+
+.stat-card{
+text-align:center;
+
+background:var(–card);
+
+border:1px solid var(–border);
+
+border-radius:var(–radius);
+
+padding:35px;
+
+backdrop-filter:blur(20px);
+
+transition:var(–transition);
+}
+
+.stat-card:hover{
+transform:translateY(-8px);
+
+border-color:rgba(0,212,255,.4);
+
+box-shadow:
+0 0 30px rgba(0,212,255,.2);
+}
+
+.stat-card h3{
+font-size:2.5rem;
+
+color:var(–primary);
+
+margin-bottom:10px;
+}
+
+.stat-card p{
+color:var(–text-secondary);
+}
+
+/* SKILLS */
+
+.skills-grid{
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+}
+
+.skill-card{
+background:var(–card);
+
+border:1px solid var(–border);
+
+border-radius:var(–radius);
+
+padding:35px;
+
+backdrop-filter:blur(20px);
+
+transition:var(–transition);
+}
+
+.skill-card:hover{
+transform:
+translateY(-10px);
+
+border-color:
+rgba(0,212,255,.4);
+
+box-shadow:
+0 0 35px
+rgba(0,212,255,.18);
+}
+
+.skill-card h3{
+color:var(–primary);
+
+margin-bottom:15px;
+
+font-size:1.3rem;
+}
+
+.skill-card p{
+color:var(–text-secondary);
+}
+
+/* PROJECTS */
+
+.project-grid{
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+}
+
+.project-card{
+position:relative;
+
+background:var(–card);
+
+border:1px solid var(–border);
+
+border-radius:var(–radius);
+
+padding:35px;
+
+overflow:hidden;
+
+transition:var(–transition);
+}
+
+.project-card::before{
+content:””;
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+135deg,
+rgba(0,212,255,.08),
+transparent
+);
+
+opacity:0;
+
+transition:var(–transition);
+}
+
+.project-card:hover::before{
+opacity:1;
+}
+
+.project-card:hover{
+transform:
+translateY(-12px);
+
+border-color:
+rgba(0,212,255,.4);
+
+box-shadow:
+0 0 40px
+rgba(0,212,255,.15);
+}
+
+.project-card h3{
+color:var(–primary);
+
+margin-bottom:15px;
+
+position:relative;
+z-index:2;
+}
+
+.project-card p{
+color:var(–text-secondary);
+
+position:relative;
+z-index:2;
+}
+/* ===================================
+V5 PORTFOLIO - PART 3
+ACHIEVEMENTS + TIMELINE +
+CONTACT + FOOTER + MOBILE
+=================================== */
+
+/* ACHIEVEMENTS */
+
+.achievement-grid{
+grid-template-columns:
+repeat(auto-fit,minmax(240px,1fr));
+}
+
+.achievement-card{
+background:var(–card);
+
+border:1px solid var(–border);
+
+border-radius:var(–radius);
+
+padding:30px;
+
+text-align:center;
+
+font-weight:600;
+
+backdrop-filter:blur(20px);
+
+transition:var(–transition);
+}
+
+.achievement-card:hover{
+transform:translateY(-8px);
+
+border-color:
+rgba(0,212,255,.35);
+
+box-shadow:
+0 0 30px
+rgba(0,212,255,.15);
+}
+
+/* TIMELINE */
+
+.timeline{
+max-width:900px;
+margin:auto;
+}
+
+.timeline-item{
+position:relative;
+
+margin-bottom:24px;
+
+padding:30px;
+
+background:var(–card);
+
+border-left:
+4px solid var(–primary);
+
+border-radius:20px;
+
+backdrop-filter:blur(20px);
+
+transition:var(–transition);
+}
+
+.timeline-item:hover{
+transform:translateX(10px);
+}
+
+.timeline-item span{
+display:block;
+
+color:var(–primary);
+
+margin-bottom:10px;
+
+font-weight:700;
+}
+
+.timeline-item h3{
+font-size:1.2rem;
+}
+
+/* CONTACT */
+
+.contact-grid{
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+}
+
+.contact-card{
+background:var(–card);
+
+border:1px solid var(–border);
+
+border-radius:var(–radius);
+
+padding:35px;
+
+text-align:center;
+
+backdrop-filter:blur(20px);
+
+transition:var(–transition);
+}
+
+.contact-card:hover{
+transform:translateY(-10px);
+
+border-color:
+rgba(0,212,255,.35);
+
+box-shadow:
+0 0 35px
+rgba(0,212,255,.15);
+}
+
+.contact-card h3{
+color:var(–primary);
+
+margin-bottom:15px;
+}
+
+.contact-card a{
+color:var(–primary);
+
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:80px;
+
+text-align:center;
+
+padding:40px 20px;
+
+border-top:
+1px solid var(–border);
+
+color:var(–text-secondary);
+}
+
+/* WHATSAPP */
+
+.whatsapp-float{
+position:fixed;
+
+right:25px;
+bottom:25px;
+
+width:65px;
+height:65px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+text-decoration:none;
+
+font-size:1.8rem;
+
+background:#25D366;
+
+color:#fff;
+
+z-index:9999;
+
+box-shadow:
+0 0 30px
+rgba(37,211,102,.45);
+
+transition:var(–transition);
+}
+
+.whatsapp-float:hover{
+transform:scale(1.08);
+}
+
+/* SCROLL REVEAL */
+
+.reveal{
+opacity:0;
+
+transform:
+translateY(40px);
+
+transition:
+all .8s ease;
+}
+
+.reveal.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ACTIVE NAV */
+
+.nav-links a.active{
+color:var(–primary);
+
+text-shadow:
+0 0 15px
+rgba(0,212,255,.6);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.navbar{
+width:95%;
+
+padding:14px;
+
+}
+
+.nav-links{
+gap:12px;
+
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.nav-links a{
+font-size:.85rem;
+}
+
+.hero{
+padding-top:140px;
+}
+
+.profile-image{
+width:170px;
+height:170px;
+}
+
+.hero h1{
+font-size:3rem;
+}
+
+.hero-description{
+font-size:1rem;
+}
+
+.glass-card,
+.skill-card,
+.project-card,
+.achievement-card,
+.contact-card,
+.timeline-item{
+padding:25px;
+}
+
+}
+
+@media(max-width:500px){
+
+section{
+padding:100px 18px;
+}
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.btn{
+width:100%;
+}
+
+}
